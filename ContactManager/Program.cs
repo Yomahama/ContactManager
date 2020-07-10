@@ -12,7 +12,11 @@ namespace ContactManager
 
             while (run)
             {
-                InOut.PrintStartingPage();
+                Console.WriteLine("Choose a function by number: ");
+                Console.WriteLine("1 - Add contact");
+                Console.WriteLine("2 - Delete contact");
+                Console.WriteLine("3 - Update contact information");
+                Console.WriteLine("4 - View all contacts");
 
                 bool correctInput = int.TryParse(Console.ReadLine(), out int choiceInput);
 

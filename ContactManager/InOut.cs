@@ -6,15 +6,10 @@ namespace ContactManager
 {
     class InOut
     {
-        public static void PrintStartingPage()
-        {
-            Console.WriteLine("Choose a function by number: ");
-            Console.WriteLine("1 - Add contact");
-            Console.WriteLine("2 - Delete contact");
-            Console.WriteLine("3 - Update contact information");
-            Console.WriteLine("4 - View all contacts");
-        }
-
+        /// <summary>
+        /// Prints all contacts in a table
+        /// </summary>
+        /// <param name="header"></param>
         public static void PrintAllContacts(string header)
         {
             List<Contact> allContacts = GetAllContacts();
@@ -42,6 +37,10 @@ namespace ContactManager
             Console.WriteLine(new string('-', lenght));
         }
 
+        /// <summary>
+        /// Prints header of a contacts table
+        /// </summary>
+        /// <param name="lenght"></param>
         private static void PrintContactsHeader(out int lenght)
         {
             string header = string.Format("| {0, 2} | {1, -15} | {2, -15} | {3, 15} | {4, -20} |", "No.", "First Name", "Last Name", "Phone Number", "Address");
@@ -53,6 +52,10 @@ namespace ContactManager
             Console.WriteLine(new string('-', header.Length));
         }
 
+        /// <summary>
+        /// Reads the data file and gets all contacts
+        /// </summary>
+        /// <returns>List of contacts</returns>
         public static List<Contact> GetAllContacts()
         {
             string filename = "contacts.csv";

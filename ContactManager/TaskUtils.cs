@@ -7,6 +7,11 @@ namespace ContactManager
 {
     class TaskUtils
     {
+        /// <summary>
+        /// Checks wether number is owned by other contacts or not
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static bool CheckIfNumberAlreadyExists(string number)
         {
             List<Contact> contacts = InOut.GetAllContacts();
@@ -16,6 +21,11 @@ namespace ContactManager
             return quantity < 1 ? false : true;
         }
 
+        /// <summary>
+        /// Adds typed contacts to a data file 
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <param name="contactInput"></param>
         public static void AddAndSave(string filename, string contactInput)
         {
             try
@@ -47,6 +57,11 @@ namespace ContactManager
             }
         }
 
+        /// <summary>
+        /// Removes a contact by specific property
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="filename"></param>
         public static void RemoveContact(string number, string filename)
         {
             if (InOut.GetAllContacts().Count != 0)
@@ -69,10 +84,14 @@ namespace ContactManager
                 {
                     Console.WriteLine("A contact with typed number does not exists.");
                 }
-
             }
         }
 
+        /// <summary>
+        /// Lets get the specific line from a data file and update it
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="filename"></param>
         public static void UpdateContact(int index, string filename)
         {
             if (InOut.GetAllContacts().Count != 0)
@@ -124,16 +143,16 @@ namespace ContactManager
             }
         }
 
+        /// <summary>
+        /// Goes back to menu when ENTER key is pressed
+        /// </summary>
+        /// <param name="run"></param>
         public static void GoBack(ref bool run)
         {
             if (Console.ReadKey().Key == ConsoleKey.Enter)
             {
                 Console.Clear();
                 run = true;
-            }
-            else
-            {
-                return;
             }
         }
     }
