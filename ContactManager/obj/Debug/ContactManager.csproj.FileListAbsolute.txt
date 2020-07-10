@@ -1,0 +1,6 @@
+C:\Users\Rimas\source\repos\ContactManager\ContactManager\bin\Debug\ContactManager.exe.config
+C:\Users\Rimas\source\repos\ContactManager\ContactManager\bin\Debug\ContactManager.exe
+C:\Users\Rimas\source\repos\ContactManager\ContactManager\bin\Debug\ContactManager.pdb
+C:\Users\Rimas\source\repos\ContactManager\ContactManager\obj\Debug\ContactManager.csprojAssemblyReference.cache
+C:\Users\Rimas\source\repos\ContactManager\ContactManager\obj\Debug\ContactManager.exe
+C:\Users\Rimas\source\repos\ContactManager\ContactManager\obj\Debug\ContactManager.pdb
